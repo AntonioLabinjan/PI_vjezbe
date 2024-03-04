@@ -91,3 +91,205 @@ const suma = (n * (n + 1)) / 2;
 // Ispis rezultata
 console.log(`Zbroj prvih ${n} brojeva je:`, suma);
 */
+/*
+// NOVO
+// let i const ne možemo redeklarirati
+// var možemo redeklarirati
+//  let ima block scope
+// glavni tipovi podataka su number, string i boolean
+// const se mora inicijalizirati prilikom deklaracije i više se ne može mijenjati
+let broj = 5;
+let tekst = "hello";
+let c = true;
+
+//console.log(typeof(a)); // number
+//console.log(typeof(b)); // string 
+//console.log(typeof(c)); // boolean
+
+
+/* ovo ne more
+const h = 6;
+h = 4;
+*/
+// OPERATORI
+let a = 8;
+let b = 4;
+
+console.log(a+b);
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+
+++a; // povećali smo a za 1
+a--; // smanjili smo a za 1
+
+console.log(a**b);
+console.log(a%b);
+
+// kao u C++
+a = a+2;
+a+=2;
+
+a = a-2;
+a-=2;
+
+a = a*2;
+a*=2;
+
+a=a/2;
+a/=2;
+
+console.log(a>b);
+console.log(a<b);
+console.log(a==b); // ovo provjerava dali se vrijednost poklapa
+console.log(a===b); // ovo provjerava dali se i vrijednost i tip poklapa (operator identično)
+
+console.log(true && true); // true
+console.log(true&&false); // false
+
+console.log(true || true); // true
+console.log(false || false); // false
+console.log(false || true); // true
+
+
+let d = 7;
+
+console.log(typeof(d)) // typeof vraća tip podataka
+// ovi logički operatori su intuitivni kao u svakom jeziku
+
+
+
+let brojProcitanihStranica = 150;
+let ciljaniBrojStranica = 200;
+
+let ciljPostignut = brojProcitanihStranica >= ciljaniBrojStranica;
+
+console.log(ciljPostignut);
+
+
+let avionskeKarteKupljene = false;
+let kartaZaVlakKupljena = true;
+let rezerviranSmjestajHotela = true;
+let nacinZaPutovanjeSpreman = avionskeKarteKupljene || kartaZaVlakKupljena
+
+let spremniZaPutovanje = nacinZaPutovanjeSpreman && rezerviranSmjestajHotela;
+console.log(spremniZaPutovanje);
+
+// dinamičko mijenjanje tipa podataka
+let h = 5;
+console.log(typeof(a));
+let i = tekst;
+let j = true;
+a = "tekst2";
+console.log(typeof(a));
+
+
+// vježba
+let a = 5;
+let b = "5";
+let c = true;
+
+console.log("Varijabla a je tipa " + typeof(a)); // number
+console.log("Varijabla b je tipa " + typeof(b)); // string
+console.log("Varijabla c je tipa " + typeof(c)); // boolean
+
+
+let a = 5;
+let b = 10;
+
+console.log("Zbroj: " + (a+b));
+console.log("Razlika: " + (a-b));
+console.log("Umnožak: " + (a*b));
+console.log("Količnik: " + (a/b));
+console.log("Ostatak dijeljenja: " + (a%b));
+console.log("Potenciranje: " + (a**b));
+
+
+// JS tipovi podataka su čudni :)
+
+let x = 16 + "Volvo";
+let b = "16" + "Volvo";
+
+let c = 16+4+"Volvo";
+
+console.log(x);
+console.log(b);
+console.log(c);
+
+// JS stringovi se moru pisat u bilo kojima navodnicima
+let x = "Petar";
+
+let y = 'Petar';
+
+
+// ako želimo navodnike unutar stringa, samo ubacimo one druge
+let h = "Pero 'Terminator' Perić";
+let z = "Petar je \"kralj\"";
+
+console.log(h, z, x, y)
+
+// varijable unutar stringa...treba nam dolar sign
+
+let c = `Moje ime je ${x}`;
+console.log(c);
+
+let s = `2 + 5 = ${2 + 5}`;
+console.log(s);
+
+
+// JS stringovi se moru pisat u bilo kojima navodnicima
+let x = "Petar";
+
+let y = 'Petar';
+
+
+// ako želimo navodnike unutar stringa, samo ubacimo one druge
+let h = "Pero 'Terminator' Perić";
+let z = "Petar je \"kralj\"";
+
+console.log(h, z, x, y)
+
+// varijable unutar stringa...treba nam dolar sign
+
+let c = `Moje ime je ${x}`;
+console.log(c);
+
+let s = `2 + 5 = ${2 + 5}`;
+console.log(s);
+
+// Konkatenacija stringova
+
+let ime = "Marko";
+
+let prezime = "Matić";
+
+console.log("Moje ime je " + ime + " " + prezime);
+console.log(`Moje ime je ${ime} ${prezime}`);
+
+
+
+let cilj_1_prođena_prva_skripta = true;
+
+let broj_procitanih_stranica = 300;
+
+let broj_stranica_knjige = 300;
+
+let cilj_2_procitana_knjiga = broj_procitanih_stranica >= broj_stranica_knjige;
+
+broj_sati_odvjezbano = 2;
+broj_sati_vjezbanja = 2;
+
+let sati_su_odvjezbani = broj_sati_odvjezbano >= broj_sati_vjezbanja;
+
+let rijeseni_zadaci = 10;
+let trazeni_broj_rijesenih_zadataka = 10;
+
+let rijesili_zadatke = rijeseni_zadaci >= trazeni_broj_rijesenih_zadataka;
+let cilj_3_vjezbanje_javascripta = sati_su_odvjezbani && rijesili_zadatke;
+
+let cilj_4_odspavali_smo_svaki_dan = true;
+
+let tjedni_cilj = cilj_1_prođena_prva_skripta && cilj_2_procitana_knjiga && cilj_3_vjezbanje_javascripta && cilj_4_odspavali_smo_svaki_dan;
+
+console.log(tjedni_cilj);
+*/
